@@ -1,10 +1,10 @@
-package com.maike.rodrigues.citiesapi;
+package com.maike.rodrigues.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CitiesApiApplicationTests {
+class MainApplicationTests {
 
 	@Test
 	void contextLoads() {

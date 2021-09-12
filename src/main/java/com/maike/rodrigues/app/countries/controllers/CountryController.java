@@ -1,8 +1,8 @@
-package com.maike.rodrigues.citiesapi.countries.controllers;
+package com.maike.rodrigues.app.countries.controllers;
 
-import com.maike.rodrigues.citiesapi.countries.entities.Country;
-import com.maike.rodrigues.citiesapi.countries.exceptions.CountryNotFoundException;
-import com.maike.rodrigues.citiesapi.countries.services.CountryService;
+import com.maike.rodrigues.app.countries.entities.Country;
+import com.maike.rodrigues.app.countries.services.CountryService;
+import com.maike.rodrigues.app.countries.exceptions.CountryNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

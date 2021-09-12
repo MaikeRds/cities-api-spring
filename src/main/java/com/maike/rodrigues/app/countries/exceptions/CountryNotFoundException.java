@@ -1,4 +1,4 @@
-package com.maike.rodrigues.citiesapi.countries.exceptions;
+package com.maike.rodrigues.app.countries.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

@@ -1,4 +1,4 @@
-package com.maike.rodrigues.citiesapi.cities.entities;
+package com.maike.rodrigues.app.cities.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

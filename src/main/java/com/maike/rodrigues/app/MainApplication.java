@@ -1,13 +1,13 @@
-package com.maike.rodrigues.citiesapi;
+package com.maike.rodrigues.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CitiesApiApplication {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CitiesApiApplication.class, args);
+		SpringApplication.run(MainApplication.class, args);
 	}
 
 }
