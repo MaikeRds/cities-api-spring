@@ -9,3 +9,8 @@ set -e
 psql -v --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" -f /tmp/pais.sql
 psql -v --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" -f /tmp/estado.sql
 psql -v --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" -f /tmp/cidade.sql
+
+psql -v --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-EOSQL
+  CREATE EXTENSION cube;
+  CREATE EXTENSION earthdistance;
+EOSQL

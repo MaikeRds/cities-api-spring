@@ -7,13 +7,14 @@ import lombok.NoArgsConstructor;
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;
 import org.hibernate.usertype.UserType;
+import org.postgresql.geometric.PGpoint;
 import org.springframework.data.geo.Point;
 
 import java.io.Serializable;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import java.util.Optional;
 
 public class PointType implements UserType {
     @Override
@@ -46,12 +47,15 @@ public class PointType implements UserType {
         return new Point(points[0], points1);
         */
 
-        /* 2nd
-        PGpoint value = (PGpoint) rs.getObject(names[0]);
-        return new Point(value.x, value.y);
-        */
+        /* 2nd */
+        Optional<Object> value = Optional.ofNullable(rs.getObject(names[0]));
 
-        return null;
+        if(value.isPresent()){
+            PGpoint point = (PGpoint) value.get();
+            return new Point(point.x, point.y);
+        }
+
+        return new Point(0, 0);
     }
 
     @Override
