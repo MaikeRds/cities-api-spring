@@ -21,3 +21,13 @@ GET http://localhost:8080/api/v1/cities/list/pagination
 ?page=0
 &size=20
 &sort=id,desc
+
+### Calculate distances for by-points
+GET http://localhost:8080/api/v1/distances/by-points
+?from=4929
+&to=5254
+
+### Calculate distances for by-cube
+GET http://localhost:8080/api/v1/distances/by-cube
+?from=4929
+&to=5254
