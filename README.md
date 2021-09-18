@@ -27,24 +27,7 @@
     ```
 
 
-### Populate
 
-* [data](https://github.com/chinnonsantos/sql-paises-estados-cidades/tree/master/PostgreSQL)
-
-```shell script
-cd ~/workspace/sql-paises-estados-cidades/PostgreSQL
-
-docker run -it --rm --net=host -v $PWD:/tmp postgres /bin/bash
-
-psql -h localhost -U postgres_user_city cities -f /tmp/pais.sql
-psql -h localhost -U postgres_user_city cities -f /tmp/estado.sql
-psql -h localhost -U postgres_user_city cities -f /tmp/cidade.sql
-
-psql -h localhost -U postgres_user_city cities
-
-CREATE EXTENSION cube; 
-CREATE EXTENSION earthdistance;
-```
 
 * [Postgres Earth distance](https://www.postgresql.org/docs/current/earthdistance.html)
 * [earthdistance--1.0--1.1.sql](https://github.com/postgres/postgres/blob/master/contrib/earthdistance/earthdistance--1.0--1.1.sql)
@@ -52,13 +35,6 @@ CREATE EXTENSION earthdistance;
 * [postgrescheatsheet](https://postgrescheatsheet.com/#/tables)
 * [datatype-geometric](https://www.postgresql.org/docs/current/datatype-geometric.html)
 
-### Access
-
-```shell script
-docker exec -it cities-db /bin/bash
-
-psql -U postgres_user_city cities
-```
 
 ### Query Earth Distance
 
